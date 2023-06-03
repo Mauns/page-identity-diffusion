@@ -38,7 +38,7 @@ const styleBuilder = StyleDictionary.extend({
     platforms: {
         cssColorVars: {
             transforms: ["cssColors", "name/cti/kebab", "color/hex8"],
-            buildPath: "public/assets/tailwind/css/",
+            buildPath: "./src/assets/tailwind/css/",
             files: [
                 {
                     filter: (token) => isColor(token.type),
@@ -49,29 +49,29 @@ const styleBuilder = StyleDictionary.extend({
         },
         tailwindColorReference: {
             transforms: ["tailwindColors", "nameTailwindColors"],
-            buildPath: "public/assets/tailwind/",
+            buildPath: "./src/assets/tailwind/",
             files: [
                 {
                     filter: (token) => isColor(token.type),
-                    destination: "_colors.js",
+                    destination: "_colors.cjs",
                     format: "javascript/module-flat"
                 }
             ]
         },
         tailwindTypeComposition: {
             transforms: ["name/cti/camel", "sizeRem", "letterSpacingEm", "convertToString"],
-            buildPath: "public/assets/tailwind/",
+            buildPath: "./src/assets/tailwind/",
             files: [
                 {
                     filter: (token) => isAny(token.type, ['typography']),
-                    destination: "_typography.js",
+                    destination: "_typography.cjs",
                     format: "tailwindTypographyFormat"
                 }
             ]
         },
         cssTypeCompositions: {
             transforms: ["name/cti/kebab", "sizeRem", "letterSpacingEm", "convertToString"],
-            buildPath: "public/assets/tailwind/css/",
+            buildPath: "./src/assets/tailwind/css/",
             files: [
                 {
                     filter: (token) => isAny(token.type, ['typography']),

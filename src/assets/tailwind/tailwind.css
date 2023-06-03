@@ -1,0 +1,13 @@
+@import "./css/_colors.css";
+/* @import "./css/_typography.css"; */
+
+@layer utilities {
+    .action-active {
+        @apply transition-all active:duration-75 duration-500 ease-out active:scale-[var(--scale-action-active)]
+    }
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind variants;
