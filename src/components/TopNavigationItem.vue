@@ -1,0 +1,16 @@
+<script setup>
+const props = defineProps({
+  isActive: {
+    type: Boolean,
+    default: false,
+  },
+});
+</script>
+
+<template>
+  <a class="relative inline-flex items-center justify-center px-4 py-3 h-9 cursor-pointer group" :class="[props.isActive ? 'text-text-neutral' : 'text-text-muted']">
+    <div class="md-footnote-strong group-hover:text-text-neutral">
+        <slot></slot>
+    </div>
+  </a>
+</template>

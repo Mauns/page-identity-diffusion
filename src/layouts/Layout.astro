@@ -1,4 +1,9 @@
 ---
+import '@fontsource/public-sans'
+import '@fontsource/gochi-hand'
+
+import TopNavigation from '../components/TopNavigation.vue';
+
 export interface Props {
 	title: string;
 }
@@ -17,9 +22,18 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
+		<TopNavigation client:idle></TopNavigation>
 		<slot />
 	</body>
 </html>
 <style is:global lang="scss">
 	@import "../assets/tailwind/tailwind.css";
+
+	:root {
+		--scale-action-active: 0.9625;
+	}
+
+	html, body {
+		color: var(--text-neutral);
+	}
 </style>

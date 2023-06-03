@@ -24,8 +24,6 @@ const createTypeAttribute = (token) => {
             toAppend.push({ name: "font-style", value: fontWeightStyle.fontStyle })
         }
 
-        // if (attributeName === null) { return }
-
         return {
             [`${toKebabCase(attributeName)}`]: value
         }

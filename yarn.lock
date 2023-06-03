@@ -525,6 +525,16 @@
   resolved "https://registry.yarnpkg.com/@esbuild/win32-x64/-/win32-x64-0.17.19.tgz#8cfaf2ff603e9aabb910e9c0558c26cf32744061"
   integrity sha512-lAhycmKnVOuRYNtRtatQR1LPQf2oYCkRGkSFnseDAKPl8lu5SOsK/e1sXe5a0Pc5kHIHe6P2I/ilntNv2xf3cA==
 
+"@fontsource/gochi-hand@^5.0.2":
+  version "5.0.2"
+  resolved "https://registry.yarnpkg.com/@fontsource/gochi-hand/-/gochi-hand-5.0.2.tgz#f371bd4140e079ff864cd193c546fd4ddefe4791"
+  integrity sha512-nUt9UOP5kNfFkDwsECWoFEwubNrg8cRALdp5j5/qRv0AesbWEd87s3snzWWd+4f1vk/5MqfuszVJ7OYUVGhXNA==
+
+"@fontsource/public-sans@^5.0.2":
+  version "5.0.2"
+  resolved "https://registry.yarnpkg.com/@fontsource/public-sans/-/public-sans-5.0.2.tgz#462012a3b14eef93870258fb3c46c301087063c9"
+  integrity sha512-oJnLkojebdJ/MbiMuoFaSJk2Phn0nBYSGeTJcWt4F3JNUYpOvpVeChA9zjxHhRyVS194ykk3ijFCnWdA4DTwrA==
+
 "@jridgewell/gen-mapping@^0.3.0", "@jridgewell/gen-mapping@^0.3.2":
   version "0.3.3"
   resolved "https://registry.npmjs.org/@jridgewell/gen-mapping/-/gen-mapping-0.3.3.tgz"
