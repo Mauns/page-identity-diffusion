@@ -1,5 +1,6 @@
 <script setup>
 import ArticleHeroStageLogin from "../components/ArticleHeroStageLogin.vue";
+import IdentitySphere from "../components/IdentitySphere.vue";
 </script>
 
 <template>
@@ -11,6 +12,9 @@ import ArticleHeroStageLogin from "../components/ArticleHeroStageLogin.vue";
         </div>
         <div class="col-span-4">
           <div class="py-20">
+            <div class="mb-20">
+              <IdentitySphere></IdentitySphere>
+            </div>
             <p class="md-body-heading-b">Digitale Identitätsdiffusion</p>
             <h1 class="mt-4 md-title2-heading-a">
               Deine <span class="md-title2-heading-b">Identität</span> liegt

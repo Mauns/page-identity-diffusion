@@ -3,7 +3,7 @@
 
 @layer utilities {
     .action-active {
-        @apply transition-all active:duration-75 duration-500 ease-out active:scale-[var(--scale-action-active)]
+        @apply transition-all active:duration-75 duration-500 ease-out active:scale-[var(--scale-action-active)] will-change-contents
     }
 }
 

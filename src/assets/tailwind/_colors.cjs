@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Sat, 03 Jun 2023 21:04:09 GMT
+ * Generated on Sat, 03 Jun 2023 22:48:12 GMT
  */
 
 module.exports = {
@@ -27,6 +27,7 @@ module.exports = {
   "lavink-muted": "var(--lavink-muted)",
   "border-forced": "var(--border-forced)",
   "border-neutral": "var(--border-neutral)",
+  "border-emphasized": "var(--border-emphasized)",
   "border-inv-neutral": "var(--border-inv-neutral)",
   "surface-hole-from-top": "var(--surface-hole-from-top)",
   "surface-hole-from-bottom": "var(--surface-hole-from-bottom)",
