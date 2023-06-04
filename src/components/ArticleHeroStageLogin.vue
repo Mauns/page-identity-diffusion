@@ -18,7 +18,7 @@ import InternetButton from "./InternetButton.vue"
       </div>
     </div>
 
-    <div class="flex flex-col gap-6">
+    <form class="flex flex-col gap-6">
       <ArticleHeroStageLoginInput
         class="w-full"
         label="Nutzer:innenname"
@@ -32,7 +32,7 @@ import InternetButton from "./InternetButton.vue"
         type="password"
       ></ArticleHeroStageLoginInput>
       <InternetButton>Jetzt <span class="md-body-heading-b">einloggen</span></InternetButton>
-    </div>
+    </form>
   </div>
 </template>
 

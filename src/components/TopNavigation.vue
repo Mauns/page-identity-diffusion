@@ -32,7 +32,7 @@ import TopNavigationItem from "./TopNavigationItem.vue";
       <div class="container mx-auto">
         <div class="-mx-4 flex items-center">
             <TopNavigationItem>Start</TopNavigationItem>
-            <TopNavigationItem>Intro</TopNavigationItem>
+            <TopNavigationItem href="#intro">Intro</TopNavigationItem>
             <TopNavigationItem>Identität zurückgewinnen</TopNavigationItem>
             <TopNavigationItem>Digitale Identitäten für alle?</TopNavigationItem>
             <TopNavigationItem>Schwierigkeiten</TopNavigationItem>

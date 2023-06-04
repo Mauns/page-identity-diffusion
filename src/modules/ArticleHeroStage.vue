@@ -1,10 +1,28 @@
 <script setup>
+import { ref, onMounted } from "vue";
 import ArticleHeroStageLogin from "../components/ArticleHeroStageLogin.vue";
 import IdentitySphere from "../components/IdentitySphere.vue";
+import { normalizedMousePosition } from "../utils/normalizedMousePosition";
+
+const heroStageElement = ref(null);
+
+onMounted(() => {
+  console.log("hi");
+  // heroStageElement.value.addEventListener("mousemove", (event) => {
+  //   const normalizedCursor = normalizedMousePosition(
+  //     event,
+  //     heroStageElement.value
+  //   );
+  //   console.log(normalizedCursor);
+  // });
+});
 </script>
 
 <template>
-  <header class="article-hero-stage w-full aspect-video py-52">
+  <header
+    class="article-hero-stage w-full aspect-video py-52"
+    ref="heroStageElement"
+  >
     <div class="container mx-auto">
       <div class="grid grid-cols-12">
         <div class="col-span-8">

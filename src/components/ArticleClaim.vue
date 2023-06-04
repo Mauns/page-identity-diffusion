@@ -1,6 +1,5 @@
 <script setup>
 import { ref, onMounted } from "vue";
-import { watchDataAttrChanges } from "../utils/lenis/intersectionObserver";
 
 const claimElement = ref(null);
 const claimElementProgress = ref(0)
