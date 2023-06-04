@@ -1,11 +1,13 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import ArticleClaims from '../modules/ArticleClaims.vue';
 import ArticleHeroStage from '../modules/ArticleHeroStage.vue';
 ---
 
 <Layout title="Welcome to Astro.">
 	<main>
-		<ArticleHeroStage></ArticleHeroStage>
+		<ArticleHeroStage client:idle></ArticleHeroStage>
+		<ArticleClaims client:idle></ArticleClaims>
 	</main>
 </Layout>
 

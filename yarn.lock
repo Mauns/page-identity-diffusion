@@ -630,6 +630,11 @@
     deepmerge "^4.2.2"
     escalade "^3.1.1"
 
+"@studio-freight/lenis@^1.0.14":
+  version "1.0.14"
+  resolved "https://registry.yarnpkg.com/@studio-freight/lenis/-/lenis-1.0.14.tgz#f1557707bc99a252a4590df4314d28414cc2b402"
+  integrity sha512-tkKeh5UNylVMqxjItl3gBe0kEdOZil3392TCva1CPcsjvhvkC0sn1feHPAFRO3YmSzQUXCKJ3wjJL/lTaCDQmA==
+
 "@types/babel__core@^7.1.19":
   version "7.20.1"
   resolved "https://registry.npmjs.org/@types/babel__core/-/babel__core-7.20.1.tgz"

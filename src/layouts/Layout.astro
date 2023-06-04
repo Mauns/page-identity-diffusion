@@ -1,11 +1,11 @@
 ---
-import '@fontsource/public-sans'
-import '@fontsource/gochi-hand'
+import "@fontsource/public-sans";
+import "@fontsource/gochi-hand";
 
-import TopNavigation from '../components/TopNavigation.vue';
+import TopNavigation from "../components/TopNavigation.vue";
 
 export interface Props {
-	title: string;
+    title: string;
 }
 
 const { title } = Astro.props;
@@ -13,27 +13,32 @@ const { title } = Astro.props;
 
 <!DOCTYPE html>
 <html lang="en" class="bg-surface-neutral">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description">
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<TopNavigation client:idle></TopNavigation>
-		<slot />
-	</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="description" content="Astro description" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="generator" content={Astro.generator} />
+        <title>{title}</title>
+    </head>
+    <body>
+        <TopNavigation client:idle />
+        <slot />
+    </body>
+
+    <script>
+        import "../utils/lenis/lenis";
+    </script>
 </html>
 <style is:global lang="scss">
-	@import "../assets/tailwind/tailwind.css";
+    @import "../assets/tailwind/tailwind.css";
 
-	:root {
-		--scale-action-active: 0.9625;
-	}
+    :root {
+        --scale-action-active: 0.9625;
+    }
 
-	html, body {
-		color: var(--text-neutral);
-	}
+    html,
+    body {
+        color: var(--text-neutral);
+    }
 </style>

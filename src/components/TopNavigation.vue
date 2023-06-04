@@ -3,7 +3,7 @@ import TopNavigationItem from "./TopNavigationItem.vue";
 </script>
 
 <template>
-  <nav class="fixed top-0 left-0 right-0">
+  <nav class="fixed top-0 left-0 right-0 z-50">
     <div class="h-[52px] bg-surface-muted border-b border-border-neutral">
       <div
         class="container mx-auto w-full h-full flex justify-between items-center"
