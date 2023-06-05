@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Sat, 03 Jun 2023 22:48:12 GMT
+ * Generated on Mon, 05 Jun 2023 10:53:18 GMT
  */
 
 module.exports = {
@@ -29,6 +29,7 @@ module.exports = {
   "border-neutral": "var(--border-neutral)",
   "border-emphasized": "var(--border-emphasized)",
   "border-inv-neutral": "var(--border-inv-neutral)",
+  "border-inv-emphasized": "var(--border-inv-emphasized)",
   "surface-hole-from-top": "var(--surface-hole-from-top)",
   "surface-hole-from-bottom": "var(--surface-hole-from-bottom)",
   "surface-hole-from-left": "var(--surface-hole-from-left)",

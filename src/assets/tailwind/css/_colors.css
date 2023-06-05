@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Sat, 03 Jun 2023 22:48:12 GMT
+ * Generated on Mon, 05 Jun 2023 10:53:18 GMT
  */
 
 :root {
@@ -29,6 +29,7 @@
   --border-neutral: #f0f0f01f;
   --border-emphasized: #f0f0f038;
   --border-inv-neutral: #22212026;
+  --border-inv-emphasized: #0e0d0c54;
   --surface-hole-from-top: linear-gradient(0deg, rgba(14, 13, 12, 0) 0%, rgba(14, 13, 12, 0.5) 50%, rgba(14, 13, 12, 0.5) 100%), radial-gradient(86.2% 100% at 50% 100%, rgba(14, 13, 12, 0) 0%, rgba(14, 13, 12, 0) 55.14%, rgba(14, 13, 12, 0.1) 63.13%, rgba(14, 13, 12, 0.69) 89.06%, #0E0D0C 100%);
   --surface-hole-from-bottom: linear-gradient(180deg, rgba(14, 13, 12, 0) 0%, rgba(14, 13, 12, 0.5) 50%, rgba(14, 13, 12, 0.5) 100%), radial-gradient(86.2% 100% at 50% 0%, rgba(14, 13, 12, 0) 0%, rgba(14, 13, 12, 0) 55.14%, rgba(14, 13, 12, 0.1) 63.13%, rgba(14, 13, 12, 0.69) 89.06%, #0E0D0C 100%);
   --surface-hole-from-left: linear-gradient(270deg, rgba(14, 13, 12, 0) 0%, rgba(14, 13, 12, 0.5) 50%, rgba(14, 13, 12, 0.5) 100%), radial-gradient(100% 86.2% at 100% 50%, rgba(14, 13, 12, 0) 0%, rgba(14, 13, 12, 0) 55.14%, rgba(14, 13, 12, 0.1) 63.13%, rgba(14, 13, 12, 0.69) 89.06%, #0E0D0C 100%);

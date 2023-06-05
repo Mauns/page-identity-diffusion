@@ -1,5 +1,5 @@
 <script setup>
-import { ref, emit } from "vue";
+import { ref } from "vue";
 
 const valueModel = ref("");
 
@@ -18,9 +18,9 @@ const props = defineProps({
   }
 });
 
-const emitOnUpdate = () => {
-  emit("value-updated", valueModel.value);
-};
+// const emitOnUpdate = () => {
+//   emit("value-updated", valueModel.value);
+// };
 </script>
 
 <template>

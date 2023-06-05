@@ -1,5 +1,6 @@
 import Lenis from '@studio-freight/lenis'
 import { intersectionObserver } from './intersectionObserver'
+import { $scrollProgress, $scrollVelocity } from './scrollStore'
 
 export const lenis = new Lenis({
     duration: 1.2,
@@ -17,6 +18,8 @@ export const lenis = new Lenis({
 //get scroll value
 lenis.on('scroll', ({ scroll, limit, velocity, direction, progress }) => {
     // console.log({ scroll, limit, velocity, direction, progress })
+    $scrollProgress.set(progress)
+    $scrollVelocity.set(velocity)
 })
 
 function raf(time) {

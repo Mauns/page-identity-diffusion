@@ -1,5 +1,9 @@
 <script setup>
 import TopNavigationItem from "./TopNavigationItem.vue";
+import { useStore } from "@nanostores/vue";
+import { $scrollProgress } from "../utils/lenis/scrollStore";
+
+const scrollProgress = useStore($scrollProgress);
 </script>
 
 <template>
@@ -29,13 +33,17 @@ import TopNavigationItem from "./TopNavigationItem.vue";
       </div>
     </div>
     <div class="h-10 bg-surface-neutral border-b border-border-neutral">
+      <div
+        class="absolute bottom-0 left-0 right-0 h-px -z-0 bg-border-emphasized"
+        :style="`width: ${(scrollProgress * 100).toFixed(2)}%`"
+      ></div>
       <div class="container mx-auto">
-        <div class="-mx-4 flex items-center">
-            <TopNavigationItem>Start</TopNavigationItem>
-            <TopNavigationItem href="#intro">Intro</TopNavigationItem>
-            <TopNavigationItem>Identität zurückgewinnen</TopNavigationItem>
-            <TopNavigationItem>Digitale Identitäten für alle?</TopNavigationItem>
-            <TopNavigationItem>Schwierigkeiten</TopNavigationItem>
+        <div class="-mx-4 flex items-center z-10">
+          <TopNavigationItem>Start</TopNavigationItem>
+          <TopNavigationItem href="#intro">Intro</TopNavigationItem>
+          <TopNavigationItem>Identität zurückgewinnen</TopNavigationItem>
+          <TopNavigationItem>Digitale Identitäten für alle?</TopNavigationItem>
+          <TopNavigationItem>Schwierigkeiten</TopNavigationItem>
         </div>
       </div>
     </div>
