@@ -1,53 +1,52 @@
 <script setup>
-import IdentitySphere from "../components/IdentitySphere.vue";
+import SectionProblemsOpener from "../modules/SectionProblemsOpener.vue";
+import SectionProblemsCompanies from "../modules/SectionProblemsCompanies.vue";
 import CardStatistical from "../components/CardStatistical.vue";
-
-import { useStore } from "@nanostores/vue";
-import { $scrollVelocity } from "../utils/lenis/scrollStore";
-
-const scrollVelocity = useStore($scrollVelocity);
+import WikiTip from "../components/WikiTip.vue";
 </script>
 
 <template>
   <section class="w-full">
-    <!-- OPENER -->
-    <div class="mx-auto">
-      <div class="py-56 flex w-full items-center justify-center">
-        <IdentitySphere
-          class="w-[320px] origin-bottom will-change-transform"
-          :style="`transform: scaleY(${1 + (scrollVelocity / 100) * 0.2})`"
-        ></IdentitySphere>
+    <div
+      class="bg-surface-subdued-fade-from-bottom border-b border-border-neutral"
+    >
+      <SectionProblemsOpener></SectionProblemsOpener>
+      <div class="container mx-auto">
+        <div class="grid grid-cols-12 mb-40">
+          <div class="col-span-12 md:col-span-6 md:col-start-4">
+            <p class="text-text-neutral md-body-neutral">
+              Das Internet ist aus der Gesellschaft nicht mehr wegzudenken.
+              Viele Aufgaben, die früher analog und auch von Mensch zu Mensch
+              erledigt wurden, können heute online erledigt werden. Dazu gehören
+              beispielsweise die Kommunikation mit Freunden, Familie oder
+              Arbeitskollegen sowie der Abschluss von Verträgen und die
+              Eröffnung von Bankkonten.
+            </p>
+            <p class="text-text-neutral md-body-neutral mt-2">
+              Seit langem wird in Deutschland & Europa bemängelt, dass es an
+              Möglichkeiten und Anwendungen fehlt, sich digital auszuweisen und
+              Behördengänge digital zu erledigen. Die Beantragung von
+              Personalausweis & Reisepass, die Kfz-Zulassung oder die Ummeldung
+              des Wohnsitzes erfordern in Deutschland immer noch den Besuch
+              überfüllter und unflexibler Bürgerämter und die damit verbundenen
+              Wartezeiten.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
     <div class="container mx-auto">
-      <!-- ARTICLE I -->
-      <div class="grid grid-cols-12 my-20">
+      <div class="grid grid-cols-12 mb-20">
         <div class="col-span-12 md:col-span-6 md:col-start-4">
-          <p class="text-text-neutral md-body-neutral">
-            Das Internet ist aus der Gesellschaft nicht mehr wegzudenken. Viele
-            Aufgaben, die früher analog und auch von Mensch zu Mensch erledigt
-            wurden, können heute online erledigt werden. Dazu gehören
-            beispielsweise die Kommunikation mit Freunden, Familie oder
-            Arbeitskollegen sowie der Abschluss von Verträgen und die Eröffnung
-            von Bankkonten.
-          </p>
-          <p class="text-text-neutral md-body-neutral mt-2">
-            Seit langem wird in Deutschland & Europa bemängelt, dass es an
-            Möglichkeiten und Anwendungen fehlt, sich digital auszuweisen und
-            Behördengänge digital zu erledigen. Die Beantragung von
-            Personalausweis & Reisepass, die Kfz-Zulassung oder die Ummeldung
-            des Wohnsitzes erfordern in Deutschland immer noch den Besuch
-            überfüllter und unflexibler Bürgerämter und die damit verbundenen
-            Wartezeiten.
-          </p>
-          <div class="my-20">
+          <div class="-mt-20 mb-20">
             <div
               class="w-full aspect-[4/1] bg-surface-subdued rounded-2xl border border-border-neutral outline outline-1 outline-border-inv-emphasized"
             ></div>
           </div>
           <p class="text-text-neutral md-body-neutral">
             Sich im Netz auszuweisen und seine Identität zu bestätigen, ist
-            derzeit oft nur mit Workarounds wie Video-Ident möglich. Dieses
+            derzeit oft nur mit Workarounds wie
+            <WikiTip item="video-ident">Video-Ident</WikiTip> möglich. Dieses
             Verfahren kommt zum Beispiel bei der Eröffnung eines Bankkontos zum
             Einsatz, bei dem die Echtheit der Person per Video und durch
             Vorzeigen des Personalausweises in die Kamera überprüft wird. In
@@ -101,5 +100,6 @@ const scrollVelocity = useStore($scrollVelocity);
         </div>
       </div>
     </div>
+    <SectionProblemsCompanies></SectionProblemsCompanies>
   </section>
 </template>

@@ -7,6 +7,9 @@ module.exports = {
 			aspectRatio: {
 				'2/3': '2 / 3',
 			},
+			borderStyle: {
+				'inset': 'inset'
+			}
 		},
 	},
 	plugins: [],
