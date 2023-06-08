@@ -3,6 +3,7 @@ import SectionProblemsOpener from "../modules/SectionProblemsOpener.vue";
 import SectionProblemsCompanies from "../modules/SectionProblemsCompanies.vue";
 import CardStatistical from "../components/CardStatistical.vue";
 import WikiTip from "../components/WikiTip.vue";
+import SectionProblemsSplitscreen from "../modules/SectionProblemsSplitscreen.vue";
 </script>
 
 <template>
@@ -101,5 +102,6 @@ import WikiTip from "../components/WikiTip.vue";
       </div>
     </div>
     <SectionProblemsCompanies></SectionProblemsCompanies>
+    <SectionProblemsSplitscreen></SectionProblemsSplitscreen>
   </section>
 </template>

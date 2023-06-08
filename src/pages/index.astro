@@ -1,15 +1,21 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import SectionIntro from '../sections/SectionIntro.vue'
-import SectionProblems from '../sections/SectionProblems.vue'
+import Layout from "../layouts/Layout.astro";
+import SectionIntro from "../sections/SectionIntro.vue";
+import SectionProblems from "../sections/SectionProblems.vue";
+import Modal from "../components/Modal.vue"
+import ModalContent from "../components/ModalContent.vue"
+import SectionDecentralizedIdentity from "../sections/SectionDecentralizedIdentity.vue";
 ---
 
 <Layout title="Welcome to Astro.">
-	<main>
-		<SectionIntro class="z-10" client:idle id="intro"></SectionIntro>
-		<SectionProblems client:idle id="problems"></SectionProblems>
-	</main>
+    <main>
+		<Modal client:idle>
+			<ModalContent client:idle></ModalContent>
+		</Modal>
+        <SectionIntro client:idle class="z-10" id="intro" />
+        <SectionProblems client:idle id="problems" />
+        <SectionDecentralizedIdentity client:idle id="identity"></SectionDecentralizedIdentity>
+    </main>
 </Layout>
 
-<style>
-</style>
+<style></style>

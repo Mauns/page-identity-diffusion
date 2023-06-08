@@ -42,6 +42,8 @@ const props = defineProps({
   img {
     user-drag: none;
     -webkit-user-drag: none;
+    user-select: none;
+    -webkit-user-select: none;
   }
 
   &__blur-dodge {

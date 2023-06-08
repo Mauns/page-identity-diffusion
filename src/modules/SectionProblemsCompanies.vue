@@ -5,7 +5,7 @@ import SectionProblemsStories from "../modules/SectionProblemsStories.vue"
 
 <template>
   <div
-    class="py-20 md:pt-[33.5rem] md:-mt-72 bg-surface-subdued border-t border-border-neutral"
+    class="pb-52 md:pt-[33.5rem] md:-mt-72 bg-surface-subdued border-t border-border-neutral"
   >
     <div class="container mx-auto">
       <div class="grid grid-cols-12 mb-32">
@@ -41,7 +41,7 @@ import SectionProblemsStories from "../modules/SectionProblemsStories.vue"
         <div class="col-span-4"></div>
       </div>
       <div class="grid grid-cols-12">
-        <div class="col-span-12">
+        <div class="col-span-12 lg:col-span-8 lg:col-start-3">
             <SectionProblemsStories></SectionProblemsStories>
         </div>
       </div>

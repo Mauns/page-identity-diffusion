@@ -12,3 +12,15 @@ export const normalizedMousePosition = (event: MouseEvent, container: HTMLElemen
 //     const normalizedPosition = normalizedMousePosition(event, container);
 //     // Do something with the normalized position, such as update the UI
 //   });
+
+export const normalizeMouseCoords = (event, element) => {
+  element = element !== undefined ? element : event.target
+  const rect = element.getBoundingClientRect();
+  const x = event.clientX - rect.left;
+  const y = event.clientY - rect.top;
+  const width = rect.width;
+  const height = rect.height;
+  const normalizedX = (x / width) * 2 - 1;
+  const normalizedY = (y / height) * 2 - 1;
+  return { x: normalizedX, y: -normalizedY };
+}
