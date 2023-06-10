@@ -17,6 +17,7 @@
     "@astrojs/vue": "^2.2.1",
     "@fontsource/gochi-hand": "^5.0.2",
     "@fontsource/public-sans": "^5.0.2",
+    "@heroicons/vue": "^2.0.18",
     "@markdoc/markdoc": "^0.3.0",
     "@nanostores/vue": "^0.9.0",
     "@studio-freight/lenis": "^1.0.14",

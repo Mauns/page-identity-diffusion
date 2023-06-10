@@ -3,7 +3,6 @@ import { thresholds } from "./thresholds";
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting && entry.boundingClientRect.y > 0) {
-            window.innerHeight
 
             // const signFomular = (Math.abs(entry.boundingClientRect.top - entry.rootBounds.height) / entry.rootBounds.height * 1) - 1
             // const sign = Math.sign(signFomular)

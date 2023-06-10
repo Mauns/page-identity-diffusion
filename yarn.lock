@@ -535,6 +535,11 @@
   resolved "https://registry.npmjs.org/@fontsource/public-sans/-/public-sans-5.0.2.tgz"
   integrity sha512-oJnLkojebdJ/MbiMuoFaSJk2Phn0nBYSGeTJcWt4F3JNUYpOvpVeChA9zjxHhRyVS194ykk3ijFCnWdA4DTwrA==
 
+"@heroicons/vue@^2.0.18":
+  version "2.0.18"
+  resolved "https://registry.yarnpkg.com/@heroicons/vue/-/vue-2.0.18.tgz#cd55074dfb1915870b680e2757ca4dad6ab3326a"
+  integrity sha512-BcTC9nq2TkwNSfQuqo96J7ehx4etezypc2YeTq7KsXWxrcrerhkgjLrxGRBnStN0wrXo0Gv4BInybqz5uBG6Cw==
+
 "@jridgewell/gen-mapping@^0.3.0", "@jridgewell/gen-mapping@^0.3.2":
   version "0.3.3"
   resolved "https://registry.npmjs.org/@jridgewell/gen-mapping/-/gen-mapping-0.3.3.tgz"

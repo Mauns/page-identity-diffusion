@@ -8,7 +8,7 @@ import Splitscreen from "../components/Splitscreen.vue";
       <div
         class="col-span-6 col-start-4 h-screen flex flex-col justify-center md-body-neutral"
       >
-        <p>
+        <p data-split>
           Sowohl im staatlichen als auch im kommerziellen Fall handelt es sich
           um digitale Identitäten. Der Unterschied besteht darin, dass es im
           staatlichen Fall um den Nachweis bzw. die Bestätigung der eigenen
@@ -40,6 +40,7 @@ import Splitscreen from "../components/Splitscreen.vue";
         </p>
       </div>
       <div
+        data-split
         class="col-span-6 col-start-4 h-screen flex flex-col justify-center md-body-neutral"
       >
         <p>
