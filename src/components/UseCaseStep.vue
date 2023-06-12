@@ -27,7 +27,7 @@ const renderedBody = computed(() => {
 </script>
 
 <template>
-  <div class="w-full flex gap-5" :class="!isActive && 'cursor-pointer'">
+  <div class="w-full flex gap-5 action-active" :class="!isActive && 'cursor-pointer'">
     <div>
       <div
         :class="[

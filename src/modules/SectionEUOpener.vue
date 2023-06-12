@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <div class="w-full aspect-[2/1] py-56 bg-surface-subdued flex flex-col justify-center items-center">
+  <div class="w-full aspect-[2/1] py-56 bg-surface-subdued flex flex-col justify-center items-center border-t border-border-neutral">
     <div class="container mx-auto">
       <div class="grid grid-cols-12 justify-center items-center gap-10">
         <div class="col-span-4 aspect-square bg-surface-neutral"></div>

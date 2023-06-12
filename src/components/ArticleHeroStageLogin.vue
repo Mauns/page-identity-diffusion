@@ -1,11 +1,17 @@
 <script setup>
+import { useVModel, useStore } from "@nanostores/vue";
+import { $username, $heroStageCoords } from "../utils/store";
 import ArticleHeroStageLoginInput from "./ArticleHeroStageLoginInput.vue";
-import InternetButton from "./InternetButton.vue"
+import InternetButton from "./InternetButton.vue";
+
+const mouseCoords = useStore($heroStageCoords);
+const username = useVModel($username);
 </script>
 
 <template>
   <div
-    class="article-hero-stage-login flex flex-col w-[360px] rounded-sm flex p-6 gap-4 overflow-hidden border border-border-neutral"
+    class="article-hero-stage-login flex flex-col w-[360px] rounded-sm p-6 gap-4 overflow-hidden border border-border-neutral duration-[2000ms] ease-out"
+    :style="`transform: perspective(var(--perspective)) rotateX(${30 + mouseCoords.y * 5}deg) rotateY(${-15 + mouseCoords.x * 3}deg) rotateZ(${15 + mouseCoords.x * -3}deg);`"
   >
     <div
       class="article-hero-stage-login__app-bar flex py-2 w-full gap-3 items-center justify-center"
@@ -24,6 +30,7 @@ import InternetButton from "./InternetButton.vue"
         label="Nutzer:innenname"
         placeholder="Wähle einen Namen"
         type="text"
+        v-model="username"
       ></ArticleHeroStageLoginInput>
       <ArticleHeroStageLoginInput
         class="w-full"
@@ -31,7 +38,9 @@ import InternetButton from "./InternetButton.vue"
         placeholder="Setze ein Passwort"
         type="password"
       ></ArticleHeroStageLoginInput>
-      <InternetButton>Jetzt <span class="md-body-heading-b">einloggen</span></InternetButton>
+      <InternetButton
+        >Jetzt <span class="md-body-heading-b">einloggen</span></InternetButton
+      >
     </form>
   </div>
 </template>
@@ -49,7 +58,10 @@ import InternetButton from "./InternetButton.vue"
   box-shadow: 4px 19px 0px #101010, 3px 12px 0px #101010, 2px 4px 0px #101010,
     5px 20px 0px var(--border-neutral);
 
-  transform: matrix(1, 0.08, -0.26, 0.97, 0, 0);
+  // transform: matrix(1, 0.08, -0.26, 0.97, 0, 0);
+  will-change: transform;
+  // transform: perspective(var(--perspective)) rotateX(30deg) rotateY(-15deg)
+  //   rotateZ(15deg);
 
   &__app-bar {
     filter: drop-shadow(4px 4px 12px #000000)

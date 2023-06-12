@@ -16,7 +16,7 @@ const props = defineProps({
 </script>
 
 <template>
-  <div class="flex items-center gap-5 group" :class="isStory && 'cursor-pointer'">
+  <div class="flex items-center gap-5 group" :class="isStory && 'cursor-pointer action-active'">
     <div
       class="aspect-square"
       :class="[

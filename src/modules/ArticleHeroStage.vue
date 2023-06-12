@@ -1,32 +1,31 @@
 <script setup>
 import { ref, onMounted } from "vue";
 import ArticleHeroStageLogin from "../components/ArticleHeroStageLogin.vue";
+import ArticleHeroStageCard from "../components/ArticleHeroStageCard.vue";
 import IdentitySphere from "../components/IdentitySphere.vue";
-import { normalizedMousePosition } from "../utils/normalizedMousePosition";
+import { $heroStageCoords } from "../utils/store";
+import { useStore } from "@nanostores/vue";
+import { normalizeMouseCoords } from "../utils/normalizedMousePosition";
 
+const heroStageCoords = useStore($heroStageCoords);
 const heroStageElement = ref(null);
 
-onMounted(() => {
-  console.log("hi");
-  // heroStageElement.value.addEventListener("mousemove", (event) => {
-  //   const normalizedCursor = normalizedMousePosition(
-  //     event,
-  //     heroStageElement.value
-  //   );
-  //   console.log(normalizedCursor);
-  // });
-});
+const setMouseCoordinates = (e) => {
+  $heroStageCoords.set(normalizeMouseCoords(e, heroStageElement.value));
+};
 </script>
 
 <template>
   <header
     class="article-hero-stage w-full aspect-video py-52"
     ref="heroStageElement"
+    @mousemove="setMouseCoordinates"
   >
     <div class="container mx-auto">
       <div class="grid grid-cols-12">
-        <div class="col-span-8">
-          <ArticleHeroStageLogin></ArticleHeroStageLogin>
+        <div class="relative col-span-8">
+          <ArticleHeroStageCard class="absolute -left-1/4 top-[45%]"></ArticleHeroStageCard>
+          <ArticleHeroStageLogin class="absolute right-1/4 top-1/4"></ArticleHeroStageLogin>
         </div>
         <div class="col-span-4">
           <div class="py-20">

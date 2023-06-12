@@ -19,7 +19,7 @@ import Timeline from "../components/Timeline.vue";
       </div>
       <div class="grid grid-cols-9 md:col-span-9 gap-10">
         <div class="md:col-span-3 flex flex-col gap-8">
-          <Card class="relative flex aspect-[2/1] items-end overflow-hidden">
+          <Card class="relative flex aspect-[2/1] items-end overflow-hidden action-active">
             <img
               class="absolute top-0 left-0 w-full h-full object-cover"
               src="../assets/imgs/decentralized/decentralized_timeline-1.png"
@@ -33,7 +33,7 @@ import Timeline from "../components/Timeline.vue";
           </Card>
         </div>
         <div class="md:col-span-3 flex flex-col gap-8">
-          <Card class="relative flex aspect-[2/1] items-end overflow-hidden">
+          <Card class="relative flex aspect-[2/1] items-end overflow-hidden action-active">
             <img
               class="absolute top-0 left-0 w-full h-full object-cover"
               src="../assets/imgs/decentralized/decentralized_timeline-2.png"
@@ -48,7 +48,7 @@ import Timeline from "../components/Timeline.vue";
           </Card>
         </div>
         <div class="md:col-span-3 flex flex-col gap-8">
-          <Card class="relative flex aspect-[2/1] items-end overflow-hidden">
+          <Card class="relative flex aspect-[2/1] items-end overflow-hidden action-active">
             <img
               class="absolute top-0 left-0 w-full h-full object-cover"
               src="../assets/imgs/decentralized/decentralized_timeline-3.png"
