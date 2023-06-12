@@ -3,6 +3,7 @@ import Splitscreen from "../components/Splitscreen.vue";
 import WikiTip from "../components/WikiTip.vue";
 import SectionDecentralizedTimeline from "../modules/SectionDecentralizedTimeline.vue";
 import SectionDecentralizedUseCases from "../modules/SectionDecentralizedUseCases.vue";
+import SectionDecentralizedTech from "../modules/SectionDecentralizedTech.vue";
 </script>
 
 <template>
@@ -70,5 +71,6 @@ import SectionDecentralizedUseCases from "../modules/SectionDecentralizedUseCase
       </div>
     </div>
     <SectionDecentralizedUseCases></SectionDecentralizedUseCases>
+    <SectionDecentralizedTech></SectionDecentralizedTech>
   </section>
 </template>

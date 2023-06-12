@@ -22,6 +22,7 @@
     "@nanostores/vue": "^0.9.0",
     "@studio-freight/lenis": "^1.0.14",
     "astro": "^2.5.7",
+    "embla-carousel-vue": "^8.0.0-rc07",
     "js-convert-case": "^4.2.0",
     "lodash": "^4.17.21",
     "nanostores": "^0.9.1",

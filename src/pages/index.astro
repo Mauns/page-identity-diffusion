@@ -5,6 +5,7 @@ import SectionProblems from "../sections/SectionProblems.vue";
 import Modal from "../components/Modal.vue"
 import ModalContent from "../components/ModalContent.vue"
 import SectionDecentralizedIdentity from "../sections/SectionDecentralizedIdentity.vue";
+import SectionEU from "../sections/SectionEU.vue"
 ---
 
 <Layout title="Welcome to Astro.">
@@ -15,6 +16,7 @@ import SectionDecentralizedIdentity from "../sections/SectionDecentralizedIdenti
         <SectionIntro client:idle class="z-10" id="intro" />
         <SectionProblems client:idle id="problems" />
         <SectionDecentralizedIdentity client:idle id="identity"></SectionDecentralizedIdentity>
+        <SectionEU client:idle></SectionEU>
     </main>
 </Layout>
 
