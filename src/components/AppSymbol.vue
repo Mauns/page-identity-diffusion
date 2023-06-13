@@ -8,7 +8,7 @@ import PlayButton from "./PlayButton.vue";
       class="app-symbol relative w-36 aspect-square rounded-[28px] border-t border-r border-r-border-emphasized border-t-border-emphasized flex align-center justify-center"
     >
       <PlayButton
-        class="play-button rounded-full will-change-transform self-center -mt-2"
+        class="play-button rounded-full will-change-transform self-center"
       ></PlayButton>
       <!-- <div class="absolute top-0 left-0 w-full h-full"></div> -->
     </div>
@@ -33,7 +33,7 @@ import PlayButton from "./PlayButton.vue";
 }
 
 .play-button {
-  transform: perspective(var(--perspective)) translateX(4px) translateZ(20px);
+  transform: perspective(var(--perspective)) translateZ(40px);
 
   box-shadow: -12px 12px 16px rgba(0, 0, 0, 0.2),
     -20px 20px 64px rgba(0, 0, 0, 0.6);

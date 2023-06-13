@@ -1,10 +1,26 @@
 <script setup>
-import { ref, watch } from "vue";
+import { computed, ref, watch } from "vue";
 import { useStore } from "@nanostores/vue";
 import { $heroStageCoords, $username } from "../utils/store";
 
-const mouseCoords = useStore($heroStageCoords);
-const username = useStore($username)
+const username = useStore($username);
+
+const props = defineProps({
+  mouseCoords: {
+    x: {
+      type: Number,
+      default: 0,
+    },
+    y: {
+      type: Number,
+      default: 0,
+    },
+  },
+});
+
+const mouseCoords = computed(() => {
+  return props.mouseCoords
+})
 
 const card = ref(null);
 

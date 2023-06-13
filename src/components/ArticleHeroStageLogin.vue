@@ -1,17 +1,39 @@
 <script setup>
 import { useVModel, useStore } from "@nanostores/vue";
+import { computed } from "vue";
 import { $username, $heroStageCoords } from "../utils/store";
 import ArticleHeroStageLoginInput from "./ArticleHeroStageLoginInput.vue";
 import InternetButton from "./InternetButton.vue";
 
-const mouseCoords = useStore($heroStageCoords);
 const username = useVModel($username);
+
+const props = defineProps({
+  mouseCoords: {
+    x: {
+      type: Number,
+      default: 0,
+    },
+    y: {
+      type: Number,
+      default: 0,
+    },
+  },
+});
+
+const mouseCoords = computed(() => {
+  return props.mouseCoords;
+});
 </script>
 
 <template>
   <div
     class="article-hero-stage-login flex flex-col w-[360px] rounded-sm p-6 gap-4 overflow-hidden border border-border-neutral duration-[2000ms] ease-out"
-    :style="`transform: perspective(var(--perspective)) rotateX(${30 + mouseCoords.y * 5}deg) rotateY(${-15 + mouseCoords.x * 3}deg) rotateZ(${15 + mouseCoords.x * -3}deg);`"
+    :style="`transform: perspective(var(--perspective)) rotateX(${
+      30 + mouseCoords.y * 5
+    }deg) rotateY(${-15 + mouseCoords.x * 3}deg) rotateZ(${
+      15 + mouseCoords.x * -3
+    }deg);
+    `"
   >
     <div
       class="article-hero-stage-login__app-bar flex py-2 w-full gap-3 items-center justify-center"
@@ -38,15 +60,18 @@ const username = useVModel($username);
         placeholder="Setze ein Passwort"
         type="password"
       ></ArticleHeroStageLoginInput>
-      <InternetButton
+      <InternetButton class="article-hero-stage-login__internet-button"
         >Jetzt <span class="md-body-heading-b">einloggen</span></InternetButton
       >
     </form>
   </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .article-hero-stage-login {
+  transform-style: preserve-3d;
+  perspective: var(--perspective);
+
   background: linear-gradient(
       157.78deg,
       rgba(255, 255, 255, 0.1) 3.51%,
@@ -54,18 +79,13 @@ const username = useVModel($username);
       rgba(255, 255, 255, 0.01) 85.5%
     ),
     #0a0a0a;
-
   box-shadow: 4px 19px 0px #101010, 3px 12px 0px #101010, 2px 4px 0px #101010,
     5px 20px 0px var(--border-neutral);
 
-  // transform: matrix(1, 0.08, -0.26, 0.97, 0, 0);
-  will-change: transform;
-  // transform: perspective(var(--perspective)) rotateX(30deg) rotateY(-15deg)
-  //   rotateZ(15deg);
-
   &__app-bar {
-    filter: drop-shadow(4px 4px 12px #000000)
-      drop-shadow(13px 16px 20px #000000);
+    // filter: drop-shadow(4px 4px 12px #000000)
+    //   drop-shadow(13px 16px 20px #000000);
+    transform: translateZ(40px);
   }
 
   &__app-icon {
@@ -89,5 +109,12 @@ const username = useVModel($username);
     background-clip: text;
     text-fill-color: transparent;
   }
+
+  // &__internet-button {
+  //   transform-origin: center;
+  //   transform-style: preserve-3d;
+  //   perspective: var(--perspective);
+  //   transform: translate3d(0, 0, 40px);
+  // }
 }
 </style>

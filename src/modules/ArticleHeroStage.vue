@@ -6,10 +6,16 @@ import IdentitySphere from "../components/IdentitySphere.vue";
 import { $heroStageCoords } from "../utils/store";
 import { useStore } from "@nanostores/vue";
 import { normalizeMouseCoords } from "../utils/normalizedMousePosition";
-import ArticleHeroStageAudioPlayer from "../components/ArticleHeroStageAudioPlayer.vue"
+import ArticleHeroStageAudioPlayer from "../components/ArticleHeroStageAudioPlayer.vue";
+import AppleButton from "../components/AppleButton.vue";
+import AlDente from "../components/AlDente.vue";
 
 const heroStageCoords = useStore($heroStageCoords);
 const heroStageElement = ref(null);
+
+const player = ref(null)
+const login = ref(null)
+const card = ref(null)
 
 const setMouseCoordinates = (e) => {
   $heroStageCoords.set(normalizeMouseCoords(e, heroStageElement.value));
@@ -25,9 +31,40 @@ const setMouseCoordinates = (e) => {
     <div class="container mx-auto">
       <div class="grid grid-cols-12">
         <div class="relative col-span-8">
-          <ArticleHeroStageAudioPlayer class="absolute -left-1/4 top-0" :mouseCoords="heroStageCoords"></ArticleHeroStageAudioPlayer>
-          <ArticleHeroStageCard class="absolute -left-1/4 top-[45%]"></ArticleHeroStageCard>
-          <ArticleHeroStageLogin class="absolute right-1/4 top-1/4"></ArticleHeroStageLogin>
+          <!-- <AlDente :references="[player]"></AlDente> -->
+          <ArticleHeroStageAudioPlayer
+            ref="player"
+            class="absolute -left-1/4 top-0"
+            :mouseCoords="heroStageCoords"
+          ></ArticleHeroStageAudioPlayer>
+          <ArticleHeroStageCard
+            ref="card"
+            class="absolute -left-[22%] top-[45%]"
+            :mouseCoords="heroStageCoords"
+          ></ArticleHeroStageCard>
+          <ArticleHeroStageLogin
+            ref="login"
+            class="absolute right-1/4 top-1/4"
+            :mouseCoords="heroStageCoords"
+          ></ArticleHeroStageLogin>
+          <div
+            class="absolute -left-1/4 top-3/4 rotate-12 blur-[3px] backdrop-blur-sm backdrop-saturate-200 rounded-full"
+          >
+            <div
+              class="duration-[2000ms] ease-out"
+              :style="`
+              transform: perspective(var(--perspective)) translateX(${
+                heroStageCoords.x * -12
+              }px) translateY(${heroStageCoords.y * -24}px) rotateX(${
+                0 + heroStageCoords.y * -20
+              }deg) rotateY(${-10 + heroStageCoords.x * -20}deg) rotateZ(${
+                heroStageCoords.y * 10
+              }deg);
+            `"
+            >
+              <AppleButton>Sign in with Apfel</AppleButton>
+            </div>
+          </div>
         </div>
         <div class="col-span-4">
           <div class="py-20">
@@ -45,11 +82,13 @@ const setMouseCoordinates = (e) => {
               >
               In Deutschland und Europa können wir noch lange nicht von einem
               erfolgreichen digitalen Identitätsmanagement & Prozessen sprechen.
-              Für die meisten Anliegen sind Behördengänge notwendig. Bei der
-              Nutzung von digitalen Diensten hingegen sind digitale Identitäten
-              bereits vorhanden. Wahrscheinlich Dutzende, die man nicht im Griff
-              hat. Denn diese ergeben sich aus den Daten über dich, die
-              Unternehmen im Laufe der Zeit sammeln.
+              Für die meisten Anliegen sind Behördengänge notwendig.
+            </p>
+            <p class="mt-2 md-body-neutral">
+              Bei der Nutzung von digitalen Diensten hingegen sind digitale
+              Identitäten bereits vorhanden. Wahrscheinlich Dutzende, die man
+              nicht im Griff hat. Denn diese ergeben sich aus den Daten über
+              dich, die Unternehmen im Laufe der Zeit sammeln.
             </p>
           </div>
         </div>
