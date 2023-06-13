@@ -6,6 +6,7 @@ import IdentitySphere from "../components/IdentitySphere.vue";
 import { $heroStageCoords } from "../utils/store";
 import { useStore } from "@nanostores/vue";
 import { normalizeMouseCoords } from "../utils/normalizedMousePosition";
+import ArticleHeroStageAudioPlayer from "../components/ArticleHeroStageAudioPlayer.vue"
 
 const heroStageCoords = useStore($heroStageCoords);
 const heroStageElement = ref(null);
@@ -24,6 +25,7 @@ const setMouseCoordinates = (e) => {
     <div class="container mx-auto">
       <div class="grid grid-cols-12">
         <div class="relative col-span-8">
+          <ArticleHeroStageAudioPlayer class="absolute -left-1/4 top-0" :mouseCoords="heroStageCoords"></ArticleHeroStageAudioPlayer>
           <ArticleHeroStageCard class="absolute -left-1/4 top-[45%]"></ArticleHeroStageCard>
           <ArticleHeroStageLogin class="absolute right-1/4 top-1/4"></ArticleHeroStageLogin>
         </div>
