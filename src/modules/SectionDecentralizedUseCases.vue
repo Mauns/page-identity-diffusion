@@ -13,14 +13,16 @@ const setCaseState = (s) => {
 };
 const pickCase = (s) => {
   pickedCase.value = s;
-  caseState.value = 0
+  caseState.value = 0;
 };
 </script>
 
 <template>
   <div class="container mx-auto">
     <Card class="w-full aspect-video">
-      <div class="w-full flex justify-center border-b border-border-neutral px-16">
+      <div
+        class="w-full flex justify-center border-b border-border-neutral px-16"
+      >
         <div
           class="md-body-strong text-text-muted py-5 px-8"
           :class="[pickedCase === i ? 'text-text-neutral' : 'cursor-pointer']"
@@ -32,7 +34,9 @@ const pickCase = (s) => {
         </div>
       </div>
       <div class="grid grid-cols-12">
-        <div class="col-span-5 max-h-min py-20 px-16 flex flex-col gap-8">
+        <div
+          class="col-span-5 max-h-min py-20 px-16 flex flex-col gap-8"
+        >
           <UseCaseStep
             v-for="(step, i) in useCaseCollection[pickedCase].steps"
             :key="i"
@@ -43,7 +47,7 @@ const pickCase = (s) => {
           ></UseCaseStep>
         </div>
         <div class="col-span-7 flex items-center justify-center aspect-square">
-            <pre>{{ pickedCase }} · {{ caseState }}</pre>
+          <pre>{{ pickedCase }} · {{ caseState }}</pre>
         </div>
       </div>
     </Card>

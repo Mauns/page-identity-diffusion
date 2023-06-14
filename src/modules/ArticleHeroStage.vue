@@ -9,13 +9,14 @@ import { normalizeMouseCoords } from "../utils/normalizedMousePosition";
 import ArticleHeroStageAudioPlayer from "../components/ArticleHeroStageAudioPlayer.vue";
 import AppleButton from "../components/AppleButton.vue";
 import AlDente from "../components/AlDente.vue";
+import { LockClosedIcon } from "@heroicons/vue/24/solid";
 
 const heroStageCoords = useStore($heroStageCoords);
 const heroStageElement = ref(null);
 
-const player = ref(null)
-const login = ref(null)
-const card = ref(null)
+const player = ref(null);
+const login = ref(null);
+const card = ref(null);
 
 const setMouseCoordinates = (e) => {
   $heroStageCoords.set(normalizeMouseCoords(e, heroStageElement.value));
@@ -62,7 +63,10 @@ const setMouseCoordinates = (e) => {
               }deg);
             `"
             >
-              <AppleButton>Sign in with Apfel</AppleButton>
+              <AppleButton
+                >Sign in with Apfel
+                <LockClosedIcon class="w-6 text-text-neutral"></LockClosedIcon
+              ></AppleButton>
             </div>
           </div>
         </div>

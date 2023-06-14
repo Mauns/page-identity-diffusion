@@ -52,7 +52,7 @@ const card = ref(null);
 </script>
 
 <template>
-  <div class="action-active">
+  <div>
     <div
       class="holo-card"
       ref="card"

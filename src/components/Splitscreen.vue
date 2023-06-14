@@ -41,18 +41,18 @@ onMounted(() => {
     <div class="grid grid-cols-12">
       <div class="col-span-6 min-h-screen max-h-fit">
         <div
-          class="sticky top-0 bottom-0 w-full h-screen flex items-center justify-center"
+          class="sticky top-0 bottom-0 w-full h-screen flex flex-col items-center justify-center"
         >
-          <pre>
+          <!-- <pre>
             {{ triggers }}
-          </pre>
+          </pre> -->
           <slot name="gfx"></slot>
         </div>
       </div>
       <div
         class="col-span-6 bg-surface-neutral min-h-screen border-l border-border-neutral flex items-center justify-center"
       >
-        <div class="grid grid-cols-12">
+        <div class="relative grid grid-cols-12">
           <slot name="text"></slot>
         </div>
       </div>

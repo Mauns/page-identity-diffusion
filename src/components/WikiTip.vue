@@ -30,7 +30,7 @@ const wikiContent = computed(() => {
 <template>
   <div class="relative inline group cursor-help">
     <Card
-      class="wiki-card -left-[120px] bottom-10 w-[360px] will-change-auto group-hover:visible opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 duration-150 ease-out"
+      class="z-50 wiki-card p-5 -left-[120px] bottom-10 w-[360px] will-change-auto group-hover:visible opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 duration-150 ease-out"
       v-html="wikiContent"
     ></Card>
     <span

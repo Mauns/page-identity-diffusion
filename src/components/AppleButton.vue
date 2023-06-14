@@ -27,9 +27,9 @@ watchEffect(() => {
     ref="button"
     @click="handleClick"
     :disabled="disabled"
-    class="action-active inline-flex items-center justify-center"
+    class="action-active inline-flex items-center justify-center gap-3"
     :class="{
-      'button--primary bg-black bg-opacity-60 rounded-full border border-border-emphasized backdrop-blur-xl backdrop-saturate-200 px-8 py-5 h-[60px]':
+      'button--primary md-body-heading-c bg-black bg-opacity-60 rounded-full border border-border-emphasized backdrop-blur-xl backdrop-saturate-200 px-8 py-5 h-[60px]':
         variant === 'primary',
       'button--secondary': variant === 'secondary',
       'button--disabled': disabled,
@@ -37,12 +37,7 @@ watchEffect(() => {
     :aria-label="ariaLabel"
     :aria-disabled="disabled"
   >
-    <span
-      :class="{
-        'button--primary md-body-heading-c': variant === 'primary',
-      }"
-      ><slot></slot
-    ></span>
+    <slot></slot>
   </button>
 </template>
   

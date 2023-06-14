@@ -1,13 +1,21 @@
 <script setup>
-import WikiTip from "../components/WikiTip.vue"
-import SectionProblemsStories from "../modules/SectionProblemsStories.vue"
+import WikiTip from "../components/WikiTip.vue";
+import SectionProblemsStories from "../modules/SectionProblemsStories.vue";
 </script>
 
 <template>
   <div
-    class="pb-52 md:pt-[33.5rem] md:-mt-72 bg-surface-subdued border-t border-border-neutral"
+    class="relative pb-52 md:pt-[33.5rem] md:-mt-60 bg-surface-subdued border-t border-border-neutral"
   >
-    <div class="container mx-auto">
+    <div
+      class="absolute left-0 top-0 bottom-0 w-1/2 h-full -z-10"
+      style="background-image: var(--surface-hole-from-left)"
+    ></div>
+    <div
+      class="absolute right-0 top-0 bottom-0 w-1/2 h-full -z-10"
+      style="background-image: var(--surface-hole-from-right)"
+    ></div>
+    <div class="relative container mx-auto z-10">
       <div class="grid grid-cols-12 mb-32">
         <div class="col-span-4"></div>
         <div class="col-span-4">
@@ -40,9 +48,9 @@ import SectionProblemsStories from "../modules/SectionProblemsStories.vue"
         </div>
         <div class="col-span-4"></div>
       </div>
-      <div class="grid grid-cols-12">
+      <div class="grid grid-cols-12 z-10">
         <div class="col-span-12 lg:col-span-8 lg:col-start-3">
-            <SectionProblemsStories></SectionProblemsStories>
+          <SectionProblemsStories></SectionProblemsStories>
         </div>
       </div>
     </div>

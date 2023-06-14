@@ -24,7 +24,7 @@ const setMousePosition = (e) => {
 <template>
   <card
     class="problems-network relative w-full mx-auto aspect-[3/1] overflow-hidden"
-    bg="bg-surface-neutral"
+    bg="bg-surface-subdued"
     @mousemove.self="setMousePosition"
   >
     <img

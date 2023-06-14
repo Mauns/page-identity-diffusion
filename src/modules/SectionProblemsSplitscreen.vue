@@ -1,9 +1,22 @@
 <script setup>
 import Splitscreen from "../components/Splitscreen.vue";
+import DevicePhone from "../components/DevicePhone.vue"
 </script>
 
 <template>
   <Splitscreen>
+    <template v-slot:gfx>
+      <div
+        class="w-full h-full bg-surface-muted flex items-center justify-center"
+      >
+        <div class="grid grid-cols-12">
+          <div class="md-title2-heading-a col-span-8 col-start-3">
+          Im kommerziellen als auch im Staatlichen Kontext geht es um
+          <span class="md-title2-heading-b">digitale</span> <span class="md-title2-heading-c">Identität</span>
+        </div>
+        </div>
+      </div>
+    </template>
     <template v-slot:text>
       <div
         class="col-span-6 col-start-4 h-screen flex flex-col justify-center md-body-neutral"
@@ -21,6 +34,19 @@ import Splitscreen from "../components/Splitscreen.vue";
           entsprechende Plattform.
         </p>
       </div>
+    </template>
+  </Splitscreen>
+  <Splitscreen class="border-none">
+    <template v-slot:gfx>
+      <div
+        class="w-full h-full bg-surface-muted flex items-center justify-center"
+      >
+        <div class="w-full grid grid-cols-12">
+          <DevicePhone class="col-span-4 col-start-5"></DevicePhone>
+        </div>
+      </div>
+    </template>
+    <template v-slot:text>
       <div
         class="col-span-6 col-start-4 h-screen flex flex-col justify-center md-body-neutral"
       >

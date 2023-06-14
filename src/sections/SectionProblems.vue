@@ -4,12 +4,23 @@ import SectionProblemsCompanies from "../modules/SectionProblemsCompanies.vue";
 import CardStatistical from "../components/CardStatistical.vue";
 import WikiTip from "../components/WikiTip.vue";
 import SectionProblemsSplitscreen from "../modules/SectionProblemsSplitscreen.vue";
+import ArticleHeroStageCard from "../components/ArticleHeroStageCard.vue";
+import { ref } from "vue";
+import { normalizeMouseCoords } from "../utils/normalizedMousePosition";
+
+const problemCardCoords = ref({ x: 0, y: 0 });
+const problemCardElement = ref(null);
+
+const setMouseCoordinates = (e) => {
+  problemCardCoords.value = normalizeMouseCoords(e, problemCardElement.value);
+};
 </script>
 
 <template>
   <section class="w-full">
     <div
       class="bg-surface-subdued-fade-from-bottom border-b border-border-neutral"
+      style="background-image: var(--surface-subdued-fade-from-bottom);"
     >
       <SectionProblemsOpener></SectionProblemsOpener>
       <div class="container mx-auto">
@@ -36,13 +47,38 @@ import SectionProblemsSplitscreen from "../modules/SectionProblemsSplitscreen.vu
         </div>
       </div>
     </div>
-    <div class="container mx-auto">
+    <div class="relative container mx-auto z-10">
       <div class="grid grid-cols-12 mb-20">
         <div class="col-span-12 md:col-span-6 md:col-start-4">
           <div class="-mt-20 mb-20">
             <div
-              class="w-full aspect-[4/1] bg-surface-subdued rounded-2xl border border-border-neutral outline outline-1 outline-border-inv-emphasized"
-            ></div>
+              class="w-full relative bg-surface-muted rounded-2xl border border-border-neutral outline outline-1 outline-border-inv-emphasized overflow-clip"
+              ref="problemCardElement"
+              @mousemove="setMouseCoordinates"
+            >
+              <div
+                class="absolute right-0 -top-1/3 scale-125 pointer-events-none z-10"
+              >
+                <ArticleHeroStageCard
+                  :mouseCoords="problemCardCoords"
+                ></ArticleHeroStageCard>
+              </div>
+              <div
+                class="relative p-8 flex flex-col gap-2 w-full md:w-2/3 z-20"
+                style="background-image: var(--surface-hole-from-left);"
+              >
+                <div class="md-heading-heading-a">
+                  Das <span class="md-heading-heading-b">Leiden</span> des
+                  wartenden <span class="md-heading-heading-c">Wärters</span>
+                </div>
+                <p class="md-caption-neutral">
+                  2021 mussten 511.102 Menschen auf Ihre Lizenz zum Picanha
+                  strip steak tenderloin spare ribs chuck turkey fatback boudin
+                  turducken ball tip. Jowl fatback capicola, cow strip steak ham
+                  hock chislic turkey biltong chuck frankfurter andouille.
+                </p>
+              </div>
+            </div>
           </div>
           <p class="text-text-neutral md-body-neutral">
             Sich im Netz auszuweisen und seine Identität zu bestätigen, ist
@@ -101,7 +137,7 @@ import SectionProblemsSplitscreen from "../modules/SectionProblemsSplitscreen.vu
         </div>
       </div>
     </div>
-    <SectionProblemsCompanies></SectionProblemsCompanies>
+    <SectionProblemsCompanies class="-z-0"></SectionProblemsCompanies>
     <SectionProblemsSplitscreen></SectionProblemsSplitscreen>
   </section>
 </template>

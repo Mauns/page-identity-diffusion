@@ -24,12 +24,25 @@ import SectionDecentralizedTech from "../modules/SectionDecentralizedTech.vue";
       />
     </div>
     <Splitscreen>
+      <template v-slot:gfx>
+        <div class="bg-surface-subdued w-full h-full flex items-center justify-center">
+          <div class="w-full grid grid-cols-12">
+            <div class="col-span-10 col-start-2">
+              <img src="../assets/imgs/decentralized/flow-chart.png" alt="">
+            </div>
+          </div>
+        </div>
+      </template>
       <template v-slot:text>
         <div
           data-split
           class="col-span-6 col-start-4 h-screen flex flex-col justify-center md-body-neutral"
         >
-          <p>
+          <div
+            class="absolute left-0 right-0 top-0 bottom-0"
+            style="background-image: var(--surface-subdued-fade-from-bottom)"
+          ></div>
+          <p class="z-10">
             Am technologischen Horizont zeichnet sich jedoch etwas ab, das es
             den Menschen ermöglichen könnte, durch das Prinzip der
             <WikiTip item="dezentralisierung">Dezentralisierung</WikiTip> die
@@ -53,7 +66,9 @@ import SectionDecentralizedTech from "../modules/SectionDecentralizedTech.vue";
         </div>
       </template>
     </Splitscreen>
-    <SectionDecentralizedTimeline></SectionDecentralizedTimeline>
+    <div class="w-full" style="background-image: var(--surface-subdued-fade-from-top);">
+      <SectionDecentralizedTimeline></SectionDecentralizedTimeline>
+    </div>
     <div class="container mx-auto mt-32 mb-14">
       <div class="grid grid-cols-12">
         <div class="col-span-12 lg:col-span-6 lg:col-start-4 text-center">
