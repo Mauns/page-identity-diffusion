@@ -3,7 +3,7 @@
     <div class="embla__container gap-10">
       <div class="embla__slide flex-grow" v-for="(p, i) in projects" :key="i">
         <a class="flex h-full action-active" :href="p.link" target="blank">
-          <Card class="w-full h-full flex flex-col gap-2">
+          <Card class="w-full h-full flex flex-col gap-2 p-5">
             <div class="flex gap-2">
               <h5 class="md-caption-strong flex-grow">{{ p.title }}</h5>
               <ArrowUpRightIcon class="w-5"></ArrowUpRightIcon>
