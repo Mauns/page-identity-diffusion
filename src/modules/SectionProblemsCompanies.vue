@@ -1,6 +1,7 @@
 <script setup>
 import WikiTip from "../components/WikiTip.vue";
 import SectionProblemsStories from "../modules/SectionProblemsStories.vue";
+import SectionProblemsPhotoApp from "../modules/SectionProblemsPhotoApp.vue";
 </script>
 
 <template>
@@ -17,7 +18,9 @@ import SectionProblemsStories from "../modules/SectionProblemsStories.vue";
     ></div>
     <div class="relative container mx-auto z-10">
       <div class="grid grid-cols-12 mb-32">
-        <div class="col-span-4"></div>
+        <div class="col-span-4">
+          <SectionProblemsPhotoApp></SectionProblemsPhotoApp>
+        </div>
         <div class="col-span-4">
           <p class="md-body-neutral">
             Im Gegensatz dazu sind viele digitale kommerzielle Dienste, die
